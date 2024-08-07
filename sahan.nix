@@ -12,11 +12,11 @@
       #kdePackages.kate
       eza
       zoxide
-      ##whois
-      ##alejandra
-      ##gnupg
-      ##pinentry-curses # gnupg dependince
-      ##libnotify
+      whois
+      alejandra
+      gnupg
+      pinentry-curses # gnupg dependince
+      libnotify
     ];
   };
 }

@@ -13,7 +13,7 @@
   outputs = {
     self,
     nixpkgs,
-   ## nixpkgs-stable,
+   ## nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let
@@ -22,7 +22,7 @@
   in {
      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       /*specialArgs = {
-        pkgs-stable = import nixpkgs-stable {
+        pkgs-stable = import nixpkgs-unstable {
           inherit system;
           config.allowUnfree = true;
         }; 
