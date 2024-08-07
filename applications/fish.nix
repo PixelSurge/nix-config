@@ -15,7 +15,7 @@
     };
     interactiveShellInit = ''
       set -U fish_greeting ""
-      source (/home/sahan/.nix-profile/bin/starship init fish --print-full-init | psub)
+      source (starship init fish --print-full-init | psub)
       zoxide init fish | source
     '';
   };

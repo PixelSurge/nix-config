@@ -145,12 +145,12 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # enabme qemu
-  ##virtualisation.libvirtd.enable = true;
-  ##programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # List services that you want to enable:
 
-  ##programs.kdeconnect.enable = true;
+  programs.kdeconnect.enable = true;
 
   # nix garbage collection
   nix.gc.automatic = true;
