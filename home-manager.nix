@@ -50,7 +50,7 @@
   programs.git = {
     enable = true;
     userEmail = "sahan.user@gmail.com";
-    userName = "sahanuser";
+    userName = "pixelsurge";
     extraConfig.init.defaultBranch = "main";
     signing.key = "BECE3A9020A1E70BD3EABDBC250D317D2A737B31";
   };
