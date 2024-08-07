@@ -100,30 +100,30 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     alsa-utils
-    file
-    unzip
+    ##file
+    ##unzip
     fish
     starship
     plymouth
-    powerdevil
+    ##powerdevil
   ];
 
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk
-    noto-fonts-emoji
-    liberation_ttf
+    ##noto-fonts-emoji
+    ##liberation_ttf
     fira-code
     fira-code-symbols
-    mplus-outline-fonts.githubRelease
-    dina-font
-    proggyfonts
-    open-sans
-    inter
+    ##mplus-outline-fonts.githubRelease
+    ##dina-font
+    ##proggyfonts
+    ##open-sans
+    ##inter
     fira-code
-    (nerdfonts.override {fonts = ["FiraCode"];})
-    wineWowPackages.fonts
-    corefonts
+    ##(nerdfonts.override {fonts = ["FiraCode"];})
+    ##wineWowPackages.fonts
+    ##corefonts
   ];
 
   # Add support for NTFS.
@@ -146,11 +146,13 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # enabme qemu
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
+  ##virtualisation.libvirtd.enable = true;
+  ##programs.virt-manager.enable = true;
 
   # List services that you want to enable:
-  programs.kdeconnect.enable = true;
+
+  ##programs.kdeconnect.enable = true;
+  
   # nix garbage collection
   nix.gc.automatic = true;
   #  nix.gc.dates = "03:15";

@@ -13,24 +13,24 @@
 
   home.packages = with pkgs; [
     alacritty
-    vscode
+    ##vscode
     #direnv
     ark
-    gwenview
-    zoom-us
-    rustup
-    virt-manager
-    virt-viewer
-    vlc
-    qemu
-    gparted
-    kdeconnect
-    arduino-ide
-    appimage-run
-    gotop
-    anki
-    plasma-browser-integration
-    gparted
+    ##gwenview
+    ##zoom-us
+    ##rustup
+    ##virt-manager
+    ##virt-viewer
+    ##vlc
+    ##qemu
+    ##gparted
+    ##kdeconnect
+    ##arduino-ide
+    ##appimage-run
+    ##gotop
+    ##anki
+    ##plasma-browser-integration
+    ##gparted
     git
   ];
 
@@ -55,10 +55,10 @@
     signing.key = "BECE3A9020A1E70BD3EABDBC250D317D2A737B31";
   };
 
-  services.gpg-agent = {
+/*   services.gpg-agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-curses;
     enableFishIntegration = true;
     enableSshSupport = true;
-  };
+  }; */
 }
