@@ -103,7 +103,6 @@
     file
     unzip
     fish
-    starship
     plymouth
     ##powerdevil
   ];
@@ -152,7 +151,7 @@
   # List services that you want to enable:
 
   ##programs.kdeconnect.enable = true;
-  
+
   # nix garbage collection
   nix.gc.automatic = true;
   #  nix.gc.dates = "03:15";
