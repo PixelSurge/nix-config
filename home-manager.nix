@@ -7,6 +7,7 @@
   imports = [
     ./applications/alacritty.nix
     ./applications/fish.nix
+    ./applications/plasma.nix
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
