@@ -33,6 +33,8 @@
     plasma-browser-integration
     git
     starship
+
+    
   ];
 
   # The state version is required and should stay at the version you
@@ -41,6 +43,11 @@
   home.homeDirectory = "/home/sahan";
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
+
+
+  # kde theming
+  qt.enable = true;
+  qt.platformTheme.name = "kde";
 
   programs.starship = {
     enable = true;
