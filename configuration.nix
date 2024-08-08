@@ -107,7 +107,7 @@
     fish
     plymouth
     ##powerdevil
-
+    unstable.youtube-music
   ];
 
   fonts.packages = with pkgs; [
