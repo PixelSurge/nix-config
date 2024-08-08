@@ -27,7 +27,7 @@
       "kwin"."Activate Window Demanding Attention" = "Meta+Ctrl+A";
       "kwin"."Cycle Overview" = [ ];
       "kwin"."Cycle Overview Opposite" = [ ];
-      "kwin"."Decrease Opacity" = [ ];
+      "kwin"."Decrease Opacity" = "none,,Decrease Opacity of Active Window by 5%";
       "kwin"."Edit Tiles" = "Meta+T";
       "kwin"."Expose" = "Ctrl+F9";
       "kwin"."ExposeAll" = ["Ctrl+F10" "Launch (C),Ctrl+F10" "Launch (C),Toggle Present Windows (All desktops)"];
@@ -237,7 +237,6 @@
       "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
       "kded5rc"."Module-device_automounter"."autoload" = false;
       "kdeglobals"."DirSelect Dialog"."DirSelectDialog Size" = "820,584";
-      "kdeglobals"."KDE"."SingleClick" = true;
       "kdeglobals"."KFileDialog Settings"."Allow Expansion" = false;
       "kdeglobals"."KFileDialog Settings"."Automatically select filename extension" = true;
       "kdeglobals"."KFileDialog Settings"."Breadcrumb Navigation" = true;
