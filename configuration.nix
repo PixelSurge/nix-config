@@ -107,12 +107,6 @@
     fish
     plymouth
     ##powerdevil
- 
-  (pkgs.writeTextDir "share/sddm/themes/breeze/theme.conf.user" ''
-    [General]
-    background="/home/sahan/nix-config/img.jpg"
-  '')  
-
 
   ];
 
