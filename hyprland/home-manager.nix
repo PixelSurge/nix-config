@@ -8,6 +8,7 @@
     ./applications/alacritty.nix
     ./applications/fish.nix
     ./applications/hyprland.nix
+    ./home/programs/default.nix
     ./applications/waybar.nix
   ];
 
@@ -36,7 +37,11 @@
     starship
     waybar
     rofi
-    
+    dunst
+    swww
+    wl-clipboard
+    pavucontrol
+    networkmanagerapplet
   ];
 
   # The state version is required and should stay at the version you

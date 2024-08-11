@@ -22,7 +22,7 @@
       };
 
       input = {
-        kb_layout = "us,ru";
+        kb_layout = "us";
         kb_variant = "lang";
         kb_options = "grp:caps_toggle";
 
@@ -111,10 +111,11 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/nix-config/img.jpg"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "swww img ~/nix-config/img.jpg"
+        "nm-applet --indicator &"
       ];
 
       bind = [
@@ -174,7 +175,7 @@
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
-        
+
         # Volume and Media Control
         ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
         ", XF86AudioLowerVolume, exec, pamixer -d 5 "

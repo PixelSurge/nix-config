@@ -7,43 +7,34 @@
         position = "top";
         margin = "9 13 -10 18";
 
-        modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
-        modules-center = ["clock" "custom/weather"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
+        modules-left = ["custom/launcher" "hyprland/workspaces"];
+        modules-center = ["clock"];
+        modules-right = [
+          "pulseaudio"
+          "custom/mem"
+          "cpu"
+          "backlight"
+          "network"
+          "custom/powermenu"
+          "tray"
+        ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
         };
 
-        "hyprland/language" = {
-          format-en = "US";
-          format-ru = "RU";
-          min-length = 5;
-          tooltip = false;
-        };
-
-        "keyboard-state" = {
-          #numlock = true;
-          capslock = true;
-          format = "{icon} ";
-          format-icons = {
-            locked = " ";
-            unlocked = "";
-          };
+        "custom/launcher" = {
+          "format" = " ";
+          "on-click" = "pkill rofi || rofi";
+          "on-click-middle" = "exec default_wall";
+          "on-click-right" = "exec wallpaper_random";
+          "tooltip" = false;
         };
 
         "clock" = {
           # timezone = "America/New_York";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format = "{:%a; %d %b, %I:%M %p}";
-        };
-
-        "custom/weather" = {
-          format = "{}";
-          tooltip = true;
-          interval = 1800;
-          exec = "$HOME/.config/waybar/scripts/wttr.py";
-          return-type = "json";
         };
 
         "pulseaudio" = {
@@ -81,21 +72,27 @@
           min-length = 6;
         };
 
-        "temperature" = {
-          # thermal-zone = 2;
-          # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-          critical-threshold = 80;
-          # format-critical = "{temperatureC}°C {icon}";
-          format = "{temperatureC}°C {icon}";
-          format-icons = ["" "" "" "" ""];
-          tooltip = false;
-        };
-
         "backlight" = {
           device = "intel_backlight";
           format = "{percent}% {icon}";
           format-icons = [""];
           min-length = 7;
+        };
+
+        "network" = {
+          "format-disconnected" = "󰯡 Disconnected";
+          "format-ethernet" = "󰒢 Connected!";
+          "format-linked" = "󰖪 {essid} (No IP)";
+          "format-wifi" = "󰖩 {essid}";
+          "interval" = 1;
+          "tooltip" = false;
+          on-click = "pavucontrol";
+        };
+
+        "custom/powermenu" = {
+          "format" = "";
+          "on-click" = "pkill rofi || ~/nix-config/hyprland/scripts/powermenu.sh";
+          "tooltip" = false;
         };
 
         tray = {
@@ -159,23 +156,6 @@
           border-radius: inherit;
       }
 
-      #language {
-          padding-left: 16px;
-          padding-right: 8px;
-          border-radius: 10px 0px 0px 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
-      #keyboard-state {
-          margin-right: 8px;
-          padding-right: 16px;
-          border-radius: 0px 10px 10px 0px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
 
       #custom-pacman {
           padding-left: 16px;
@@ -186,14 +166,6 @@
           background: #383c4a;
       }
 
-      #custom-mail {
-          margin-right: 8px;
-          padding-right: 16px;
-          border-radius: 0px 10px 10px 0px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
 
       #submap {
           padding-left: 16px;
@@ -207,15 +179,7 @@
       #clock {
           padding-left: 16px;
           padding-right: 16px;
-          border-radius: 10px 0px 0px 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
-      #custom-weather {
-          padding-right: 16px;
-          border-radius: 0px 10px 10px 0px;
+          border-radius: 10px;
           transition: none;
           color: #ffffff;
           background: #383c4a;
@@ -256,7 +220,7 @@
           background: #383c4a;
       }
 
-      #temperature {
+      #network{
           margin-right: 8px;
           padding-left: 16px;
           padding-right: 16px;
@@ -264,10 +228,6 @@
           transition: none;
           color: #ffffff;
           background: #383c4a;
-      }
-
-      #temperature.critical {
-          background-color: #eb4d4b;
       }
 
       #backlight {
@@ -278,36 +238,6 @@
           transition: none;
           color: #ffffff;
           background: #383c4a;
-      }
-
-      #battery {
-          margin-right: 8px;
-          padding-left: 16px;
-          padding-right: 16px;
-          border-radius: 10px;
-          transition: none;
-          color: #ffffff;
-          background: #383c4a;
-      }
-
-      #battery.charging {
-          color: #ffffff;
-          background-color: #26A65B;
-      }
-
-      #battery.warning:not(.charging) {
-          background-color: #ffbe61;
-          color: black;
-      }
-
-      #battery.critical:not(.charging) {
-          background-color: #f53c3c;
-          color: #ffffff;
-          animation-name: blink;
-          animation-duration: 0.5s;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
       }
 
       #tray {
