@@ -35,6 +35,8 @@
     git
     starship
     waybar
+    rofi
+    
   ];
 
   # The state version is required and should stay at the version you
