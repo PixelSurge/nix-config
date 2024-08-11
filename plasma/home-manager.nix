@@ -25,7 +25,8 @@
     vlc
     qemu
     gparted
-    kdeconnect
+#    kdeconnect
+    plasma5Packages.kdeconnect-kde
     arduino-ide
     appimage-run
     gotop
