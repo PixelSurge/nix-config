@@ -86,7 +86,7 @@
           "format-wifi" = "󰖩 {essid}";
           "interval" = 1;
           "tooltip" = false;
-          on-click = "pavucontrol";
+          on-click = "nm-applet";
         };
 
         "custom/powermenu" = {

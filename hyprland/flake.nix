@@ -9,6 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    sddm-sugar-candy-nix = {
+      url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
+    };
   };
 
   outputs = {
@@ -17,6 +20,7 @@
     nixpkgs-unstable,
     home-manager,
     hyprland,
+    sddm-sugar-candy-nix,
     ...
   } @ inputs: let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -30,9 +34,11 @@
       };
       modules = [
         ./configuration.nix
+        sddm-sugar-candy-nix.nixosModules.default
 
         {
           nixpkgs.overlays = [
+            sddm-sugar-candy-nix.overlays.default
             (final: prev: {
               # unstable = nixpkgs-unstable.legacyPackages.${prev.system};
               # use this variant if unfree packages are needed:

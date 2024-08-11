@@ -5,6 +5,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -61,7 +62,19 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.wayland.compositor = "kwin";
+  services.displayManager.sddm = {
+    sugarCandyNix = {
+      enable = true;
+      settings = {
+        Background = lib.cleanSource ./../img.jpg;
+        ScreenWidth = 1920;
+        ScreenHeight = 1080;
+        FormPosition = "left";
+        HaveFormBackground = true;
+        PartialBlur = true;
+      };
+    };
+  };
   # enable hyperland
   programs.hyprland = {
     enable = true;

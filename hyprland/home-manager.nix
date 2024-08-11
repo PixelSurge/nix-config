@@ -60,6 +60,8 @@
     enableFishIntegration = true;
   };
 
+
+
   programs.git = {
     enable = true;
     userEmail = "sahan.user@gmail.com";
