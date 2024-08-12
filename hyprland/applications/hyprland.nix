@@ -22,10 +22,6 @@
       };
 
       input = {
-        kb_layout = "us";
-        kb_variant = "lang";
-        kb_options = "grp:caps_toggle";
-
         follow_mouse = 1;
 
         touchpad = {

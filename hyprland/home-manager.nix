@@ -8,8 +8,9 @@
     ./applications/alacritty.nix
     ./applications/fish.nix
     ./applications/hyprland.nix
-    ./home/programs/default.nix
+    ./applications/dunst/default.nix
     ./applications/waybar.nix
+    ./applications/rofi/default.nix
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -59,8 +60,6 @@
     enable = true;
     enableFishIntegration = true;
   };
-
-
 
   programs.git = {
     enable = true;
